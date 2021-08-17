@@ -25,5 +25,5 @@ jobs:
           branch-suffix: "-pdf"
           commit-message: "Commit from GitHub Actions"
           path: |
-            tex
+            paper
 
