@@ -1,0 +1,29 @@
+name: paper
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      - uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Compile paper with Tectonic
+        shell: bash -l {0}
+        run: |
+          cd tex && tectonic main.tex
+            
+      - name: Place paper in -pdf branch
+        uses: dfm/force-push-branch-action@v1
+        with:
+          branch-suffix: "-pdf"
+          commit-message: "Commit from GitHub Actions"
+          path: |
+            tex
+            
