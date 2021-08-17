@@ -3,6 +3,8 @@ name: paper
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   paper:
