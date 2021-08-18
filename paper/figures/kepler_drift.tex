@@ -1,0 +1,20 @@
+
+\documentclass{standalone}
+\usepackage{tikz,bm}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}
+
+\draw[thick,-Latex] (0,0) node[above left] {$(\bm{x}_0,\bm{v}_0)$}-- (2,0) node[above]{$-T_{ij}$} node[below]{$\hat{\bm{x}}_0 = \bm{x}_0-h\bm{v}_0$} -- (4,0) node[above right]{$(\hat{\bm{x}}_0,\bm{v}_0)$};
+\draw[thick,-Latex] (4,0) -- (4,-1.75)  node[right]{$\hat{\bm{x}} = f(\hat{\bm{x}}_0,\bm{v}_0) \hat{\bm{x}}_0 + g(\hat{\bm{x}}_0,\bm{v}_0) \bm{v}_0$} -- (4,-2)node[left]{$K_{ij}$}-- (4,-2.25) node[right]{$\hat{\bm{v}} = \dot f(\hat{\bm{x}}_0,\bm{v}_0) \hat{\bm{x}}_0 + \dot g(\hat{\bm{x}}_0,\bm{v}_0) \bm{v}_0$} -- (4,-4) node[right]{$\mathrm{Result:}\; (\Delta\bm{x}_{DK},\Delta\bm{v}_{DK})=(\hat{\bm{x}},\hat{\bm{v}})-(\bm{x}_0,\bm{v}_0)$};
+\draw[thick,-Latex] (0,0) -- (0,-1.75) node[left]{$\check{\bm{x}} = f(\bm{x}_0,\bm{v}_0) \bm{x}_0+ g(\bm{x}_0,\bm{v}_0) \bm{v}_0$} -- (0,-2)node[right]{$K_{ij}$} -- (0,-2.25)  node[left]{$\check{\bm{v}} = \dot f(\bm{x}_0,\bm{v}_0) \bm{x}_0+ \dot g(\bm{x}_0,\bm{v}_0) \bm{v}_0$}-- (0,-4) node[below left]{$(\check{\bm{x}},\check{\bm{v}})$};
+\draw[thick,-Latex] (0,-4) -- (2,-4) node[below]{$-T_{ij}$} node[above]{$\bm{x} = \check{\bm{x}}-h\check{\bm{v}}$} -- (4,-4);
+\node[draw=none] at (7.5,-4.5) {$\mathrm{or}\; (\Delta\bm{x}_{KD},\Delta\bm{v}_{KD}) = (\check{\bm{x}}-h\check{\bm{v}},\check{\bm{v}})-(\bm{x}_0,\bm{v}_0)$};
+\node[draw=none] at (3.3,-0.7) {-Drift};
+\draw[thick,->] (2.5,-1.0) -- (2.8,-1.0) node[right]{Kepler};
+\node[draw=none] at (1.0,-3.1) {Kepler};
+\draw[thick,->] (0.1,-3.4) -- (0.4,-3.4) node[right]{-Drift};
+\end{tikzpicture}
+
+\end{document}
