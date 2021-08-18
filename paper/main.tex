@@ -1170,7 +1170,7 @@ Taking the derivative of these with respect to $\mathbf{q}_n$ gives:
 \href{https://github.com/ericagol/NbodyGradient.jl/blob/bc4e3ebf00f680f81bc3baacc0277850154e0b26/src/transits/timing.jl\#L178}{\frac{d v_{\mathrm{sky},ijk}}{d \Delta t}} &=& v_{\mathrm{sky},ijk}^{-1}\Bigg[(v_{x,i}-v_{x,j})\left(\frac{d v_{x,i}}{d \Delta t}-\frac{d v_{x,j}}{d \Delta t}\right) \cr
 &+& (v_{y,i}-v_{y,j})\left(\frac{d v_{y,i}}{d \Delta t}-\frac{d v_{y,j}}{d \Delta t}\right)\Bigg],\\
 % Impact parameter derivatives:
-\href{https://github.com/ericagol/NbodyGradient.jl/blob/bc4e3ebf00f680f81bc3baacc0277850154e0b26/src/transits/timing.jl#L187}{\frac{d b^2_{\mathrm{sky},ijk}}{d \mathbf{q}_n}} &=& 2\Bigg[(x_{i}-x_{j})\left(\frac{\partial x_{i}}{\partial \mathbf{q}_n}-\frac{\partial x_{j}}{\partial \mathbf{q}_n}\right) \cr
+\href{https://github.com/ericagol/NbodyGradient.jl/blob/bc4e3ebf00f680f81bc3baacc0277850154e0b26/src/transits/timing.jl\#L187}{\frac{d b^2_{\mathrm{sky},ijk}}{d \mathbf{q}_n}} &=& 2\Bigg[(x_{i}-x_{j})\left(\frac{\partial x_{i}}{\partial \mathbf{q}_n}-\frac{\partial x_{j}}{\partial \mathbf{q}_n}\right) \cr
 &+& (y_{i}-y_{j})\left(\frac{\partial y_{i}}{\partial \mathbf{q}_n}-\frac{\partial y_{j}}{\partial \mathbf{q}_n}\right)\Bigg].
 \end{eqnarray}
   Note that we compute
